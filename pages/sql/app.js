@@ -26,11 +26,11 @@ app.post('/login', function (req, res) {
 
         if(err) {
             console.log('ERROR', err);
-            res.redirect("/sqli.html#error");
+            res.redirect("sqli.html#error");
         } else if (!row) {
-            res.redirect("/sqli.html#unauthorized");
+            res.redirect("sqli.html#unauthorized");
         } else {
-            res.send('Hello <b>' + row.name + '</b><br /><a href="/sqli.html">Go back to login</a>');
+            res.send('Hello <b>' + row.name + '</b><br /><a href="sqli.html">Go back to login</a>');
         }
     });
 
